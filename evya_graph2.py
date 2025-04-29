@@ -43,6 +43,7 @@ sns.barplot(
     ci=None,
     palette='muted'
 )
+
 plt.xticks([0, 1], ['No Diabetes (0)', ' Diabetes (1)'])
 plt.title('Average Number of Pregnancies by Diabetes Outcome')
 plt.xlabel('Diabetes Outcome')
