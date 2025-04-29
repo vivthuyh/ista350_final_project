@@ -34,6 +34,9 @@ model = sm.OLS(y, X).fit()
 # Predict values for regression line
 predictions = model.predict(X)
 
+# Get R² value
+r_squared = model.rsquared
+
 # Plot
 plt.figure(figsize=(8,6))
 plt.scatter(
@@ -46,7 +49,7 @@ plt.scatter(
     alpha=0.6,               # Slight transparency
     label="Data points"
 )
-plt.plot(x, predictions, color="red", label="OLS Regression Line")
+plt.plot(x, predictions, color="red", label=f"OLS Regression Line\n$R^2$ = {r_squared:.3f}")
 plt.title("Triceps Skinfold Thickness vs. BMI", fontsize=14)
 plt.xlabel("Triceps Skinfold Thickness (mm)", fontsize=12)
 plt.ylabel("BMI (kg/m²)", fontsize=12)
