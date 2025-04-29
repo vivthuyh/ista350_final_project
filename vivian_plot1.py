@@ -20,6 +20,7 @@ print(df.head())
 
 # 1. Scatter Plot: Triceps Skinfold Thickness vs. BMI (after filtering out zeros)
 df_filtered = df[df["Triceps skin fold thickness (mm)"] != 0]
+df_filtered = df_filtered[df_filtered['Body mass index (weight in kg/(height in m)^2)'] != 0]
 
 # Define x and y
 x = df_filtered["Triceps skin fold thickness (mm)"]
